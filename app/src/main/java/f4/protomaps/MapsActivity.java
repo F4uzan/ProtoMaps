@@ -24,11 +24,14 @@ public class MapsActivity extends AppCompatActivity {
 
     Boolean mLocationPermissionGranted = false;
 
+    WebView mapsWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        
+        mapsWebView = findViewById(R.id.mapsView);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             getLocationPermission();
@@ -37,7 +40,7 @@ public class MapsActivity extends AppCompatActivity {
     }
 
     public void loadMaps() {
-        WebView mapsWebView = findViewById(R.id.mapsView);
+
         mapsWebView.setWebChromeClient(new android.webkit.WebChromeClient() {
             public void onGeolocationPermissionsShowPrompt(String origin, android.webkit.GeolocationPermissions.Callback callback) {
                 callback.invoke(origin, true, false);
