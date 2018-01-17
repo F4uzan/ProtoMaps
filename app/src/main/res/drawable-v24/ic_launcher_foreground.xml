@@ -1,0 +1,7 @@
+<!-- Imported from Maps Go app_icon -->
+<vector android:height="192dp" android:viewportHeight="192.0"
+    android:viewportWidth="192.0" android:width="192dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#1da261" android:pathData="M0,0L178.09,0C176.65,1.25 175.3,2.6 173.95,3.95C124.27,53.67 74.52,103.32 24.88,153.08C16.51,154.8 8.16,156.68 0,159.24L0,0Z"/>
+    <path android:fillColor="#ffdd46" android:pathData="M178.09,0L192,0L192,14.91C150.07,57.01 107.98,98.95 66.01,141C63.71,143.28 61.41,145.56 59.37,148.07C47.85,149.53 36.26,150.69 24.88,153.08C74.52,103.32 124.27,53.67 173.95,3.95C175.3,2.6 176.65,1.25 178.09,0Z"/>
+    <path android:fillColor="#4385f4" android:pathData="M59.37,148.07C68.91,147.5 78.45,146.71 88.01,146.65C122.98,146.22 158.34,149.09 192,159.06L192,192L0,192L0,159.24C8.16,156.68 16.51,154.8 24.88,153.08C36.26,150.69 47.85,149.53 59.37,148.07Z"/>
+</vector>

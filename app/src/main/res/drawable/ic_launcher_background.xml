@@ -1,0 +1,5 @@
+<!-- Imported from Maps Go app_icon -->
+<vector android:height="192dp" android:viewportHeight="192.0"
+    android:viewportWidth="192.0" android:width="192dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#ffffff" android:pathData="M66.01,141C107.98,98.95 150.07,57.01 192,14.91L192,159.06C158.34,149.09 122.98,146.22 88.01,146.65C78.45,146.71 68.91,147.5 59.37,148.07C61.41,145.56 63.71,143.28 66.01,141Z"/>
+</vector>
