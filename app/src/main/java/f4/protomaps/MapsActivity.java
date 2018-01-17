@@ -30,7 +30,9 @@ public class MapsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        getLocationPermission();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            getLocationPermission();
+        }
         loadMaps();
     }
 
