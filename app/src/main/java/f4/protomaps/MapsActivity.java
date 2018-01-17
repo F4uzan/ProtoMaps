@@ -8,6 +8,8 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
 import android.webkit.GeolocationPermissions;
@@ -39,8 +41,17 @@ public class MapsActivity extends AppCompatActivity {
         loadMaps();
     }
 
-    public void loadMaps() {
+    @Override
+    public void onBackPressed() {
+        if (mapsWebView.isFocused() && mapsWebView.canGoBack()) {
+            mapsWebView.goBack();
+        } else {
+            super.onBackPressed();
+            finish();
+        }
+    }
 
+    public void loadMaps() {
         mapsWebView.setWebChromeClient(new android.webkit.WebChromeClient() {
             public void onGeolocationPermissionsShowPrompt(String origin, android.webkit.GeolocationPermissions.Callback callback) {
                 callback.invoke(origin, true, false);
