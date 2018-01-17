@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
+import android.webkit.GeolocationPermissions;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -22,7 +23,12 @@ public class MapsActivity extends AppCompatActivity {
 
     public void loadMaps() {
         WebView mapsWebView = findViewById(R.id.mapsView);
-        mapsWebView.setWebChromeClient(new WebChromeClient());
+        mapsWebView.setWebChromeClient(new android.webkit.WebChromeClient() {
+            public void onGeolocationPermissionsShowPrompt(String origin, android.webkit.GeolocationPermissions.Callback callback) {
+                callback.invoke(origin, true, false);
+            }
+        });
+
         mapsWebView.setWebViewClient(new WebViewClient());
 
         // Tell the WebView that we accept cookies
@@ -35,6 +41,7 @@ public class MapsActivity extends AppCompatActivity {
 
         // Accept JS
         WebSettings webSettings = mapsWebView.getSettings();
+        webSettings.setGeolocationEnabled(true);
         webSettings.setJavaScriptEnabled(true);
 
         // Load our PWA maps link
